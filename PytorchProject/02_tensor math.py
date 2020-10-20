@@ -1,9 +1,35 @@
 import torch
 
-tensor = torch.tensor([1, 3])         # int64
-tensor = torch.tensor([1.0, 3.0])   # float32
-tensor = torch.LongTensor([1, 3])   # int64
-tensor = torch.FloatTensor([1, 3])  # float32
+x = torch.tensor([1, 2, 3])
+y = torch.tensor([9, 8, 7])
+z = torch.empty(3)
 
-print(tensor)
-print(tensor.dtype)
+# addition
+torch.add(x, y, out=z)  # all possible
+z = torch.add(x, y)
+z = x + y
+
+# division
+# z = torch.true_divide(x, y)
+
+# inplace operations
+t = torch.zeros(3)
+t.add_(x)
+t += x
+
+# exponentiation
+z = x.pow(2)
+z = x ** 2
+
+# matrix multifilcation
+
+
+
+
+
+
+
+
+
+
+
